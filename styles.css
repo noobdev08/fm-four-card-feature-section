@@ -1,0 +1,147 @@
+:root {
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* General Styles */
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    padding: 0rem 3.5rem;
+    color: var(--Grey-500)
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.textt {
+    font-weight: 200;
+}
+
+.head-text {
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.lead-text {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+/*Card Styles*/
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 2rem;
+    background-color: var(--White);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cyan{
+    width: 100%;
+    border-bottom: 5px solid var(--Cyan);
+}
+
+.red {
+    width: 100%;
+    border-bottom: 5px solid var(--Red);
+}
+
+.orange {
+    width: 100%;
+    border-bottom: 5px solid var(--Orange);
+}
+
+.blue {
+    width: 100%;
+    border-bottom: 5px solid var(--Blue);
+}
+
+.content p:nth-of-type(1){
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.content p:nth-of-type(2){
+    font-weight: 200;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--Grey-400)
+}
+
+.img-div {
+    display: flex;
+    justify-content: end;
+}
+
+.attribution {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .lead-text {
+    width: 60%;
+    margin-bottom: 5rem;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(3, 0.6fr);
+    grid-template-areas:
+      ". top ."
+      "left top right"
+      "left down right"
+      ". down .";
+    gap: 2rem;
+  }
+
+  .sec-1 { grid-area: left; }
+  .sec-2 { grid-area: top; }
+  .sec-3 { grid-area: down; }
+  .sec-4 { grid-area: right; }
+}
