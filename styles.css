@@ -26,8 +26,9 @@ body {
     align-items: center;
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    padding: 0rem 3.5rem;
-    color: var(--Grey-500)
+    padding: 0rem 1.5rem;
+    color: var(--Grey-500);
+    background-color: hsla(0, 0%, 0%, 0.029);
 }
 
 header{
@@ -41,13 +42,13 @@ header{
 }
 
 .head-text {
-    margin-top: 3rem;
-    font-size: 1.8rem;
+    margin-top: 3.5rem;
+    font-size: 1.6rem;
     text-align: center;
 }
 
 .lead-text {
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     width: 100%;
     margin-left: auto;
@@ -125,9 +126,10 @@ main {
 
 @media (min-width: 1024px) {
   .lead-text {
-    width: 60%;
+    width: 100%;
     margin-bottom: 5rem;
   }
+
 
   main {
     display: grid;
